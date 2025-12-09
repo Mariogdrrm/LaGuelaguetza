@@ -239,7 +239,7 @@ body {
     color: var(--naranja-mexicano);
     font-weight: 700;
     margin: 0;
-    font-size: 3vw; /* predeterminado */
+    font-size: 5vw; /* predeterminado */
 }
 
 .card-link {
@@ -662,6 +662,7 @@ body {
     font-weight: 500;
     color: black;
 }
+
 
 
 
