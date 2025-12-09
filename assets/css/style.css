@@ -245,6 +245,26 @@ body {
     text-decoration: none; 
 }
 
+/* Título de la card escalable automáticamente */
+.region-card .card-title {
+    color: var(--naranja-mexicano);
+    font-weight: 700;
+    margin: 0;
+    padding: 0 0.5rem;
+    text-align: center;
+    /* clamp(min, preferred, max) para escalar según ancho de pantalla */
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    line-height: 1.2;
+}
+
+/* Texto dentro del cuerpo de la card escalable automáticamente */
+.region-card .card-body p {
+    margin: 0.2rem 0;
+    text-align: center;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+
 
 /* ===============================================
 7. Estilos de Modales (CSS Puros)
@@ -662,3 +682,4 @@ body {
     font-weight: 500;
     color: black;
 }
+
