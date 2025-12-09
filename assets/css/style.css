@@ -239,13 +239,8 @@ body {
     color: var(--naranja-mexicano);
     font-weight: 700;
     margin: 0;
-    font-size: 3vw; /* predeterminado */
+    font-size: 2vw; /* predeterminado */
 }
-
-@media (max-width: 600px) {
-    .region-card .card-title {
-        font-size: 5vw; /* más pequeño en pantallas muy chicas */
-    }
 
 .card-link {
     text-decoration: none; 
@@ -667,6 +662,7 @@ body {
     font-weight: 500;
     color: black;
 }
+
 
 
 
