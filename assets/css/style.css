@@ -7,14 +7,14 @@
 5. Sección Introducción Corta (Textura)
 6. Sección Regiones / Cards
 7. Estilos de Modales (CSS Puros)
-===============================================
-*/
+8. Sección Horarios
+9. Sección Registro
+10. Footer y Contacto
+=============================================== */
 
 /* ===============================================
 1. Variables y Fuentes
 =============================================== */
-
-/* --- Declaración de Colores como Variables CSS --- */
 :root {
     --rosa-mexicano: #e4007c;
     --azul-maya: #0077c0;
@@ -26,36 +26,30 @@
 /* ===============================================
 2. Estilos Globales y Títulos
 =============================================== */
-
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--negro-suave);
 }
 
-/* Fuente exclusiva para el título principal y cabeceras de modal */
+/* Fuente para títulos principales y modales */
 .guelagetza-title, .css-modal .modal-title {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
     color: var(--rosa-mexicano);
 }
 
-
 /* ===============================================
 3. Navbar y Banda de Colores
 =============================================== */
-
-/* --- Navbar General --- */
 .custom-navbar {
-    background-color: var(--beige) !important;
+    background-color: var(--beige);
 }
 
-/* Tamaño del logo */
 .navbar-logo {
     height: 50px;
     width: auto;
 }
 
-/* === Banda de colores (Separador visual) === */
 .color-separator-gradient {
     width: 100%;
     height: 10px;
@@ -70,16 +64,12 @@ body {
     );
 }
 
-/* === RESPONSIVE: Navbar en Móviles (Centrado) === */
 @media (max-width: 768px) {
-    .container-fluid {
-        /* Asegura que el logo y el toggler estén en la misma línea */
+    .custom-navbar-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-
-    /* Centrar el contenido del brand */
     .navbar-brand-area {
         flex: 1;
         display: flex;
@@ -87,29 +77,22 @@ body {
     }
 }
 
-
 /* ===============================================
 4. Sección Bienvenida / Carousel
 =============================================== */
-
-/* Imagen del Carousel (Responsividad y altura) */
 .carousel-img {
-    height: 70vh; /* Altura de la imagen en  */
+    height: 70vh;
     object-fit: cover;
 }
 
-/* Área de Texto y Fondo Beige (Caption) */
 .custom-caption-area {
-    /* Re-posicionamos el caption para cubrir la parte izquierda */
     top: 0;
     bottom: 0;
     left: 0;
-    right: auto; 
-    width: 100%; /* Ocupa todo el ancho en móvil */
+    right: auto;
+    width: 100%;
     padding: 0;
-    
-    /* Fondo Beige con opacidad */
-    background-color: rgba(241, 225, 203, 0.8); /* Opacidad aumentada para legibilidad */
+    background-color: rgba(241, 225, 203, 0.8);
     color: var(--negro-suave);
 }
 
@@ -120,18 +103,16 @@ body {
     justify-content: center;
 }
 
-/* --- RESPONSIVE: Desktop (mitad de pantalla) --- */
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .custom-caption-area {
-        width: 45%; 
+        width: 45%;
         text-shadow: none;
     }
     .carousel-img {
-        height: 85vh; /* Altura aumentada en desktop */
+        height: 85vh;
     }
 }
 
-/* Estilos de los Botones de Acción (Registro y Programa) */
 .custom-btn-registro {
     background-color: var(--rosa-mexicano);
     border-color: var(--rosa-mexicano);
@@ -158,139 +139,117 @@ body {
     color: white;
 }
 
-
 /* ===============================================
 5. Sección Introducción Corta (Textura)
 =============================================== */
-
 #introduccion-corta {
-    /* Fondo de imagen con overlay (Oscurece la imagen para legibilidad) */
-    background: 
-        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), 
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.3)), 
         url('../images/background/textura2.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Efecto Parallax */
-    min-height: 250px; 
+    background-attachment: fixed;
+    min-height: 250px;
 }
 
 #introduccion-corta h2 {
-    color: var(--naranja-mexicano); 
+    color: var(--naranja-mexicano);
 }
 
 #introduccion-corta p.lead {
-    color: var(--beige); 
-    max-width: 900px; 
-    margin: 0 auto; /* Asegura que se centre si usas max-width */
+    color: var(--beige);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* === Estilo para texto destacado === */
 .destacado {
     color: var(--naranja-mexicano);
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     font-weight: bold;
 }
 
-
 /* ===============================================
 6. Sección Regiones / Cards
 =============================================== */
-
 #regiones h2 {
     color: var(--naranja-mexicano);
 }
 
-/* --- Estilos Generales de las Tarjetas (Cards) --- */
 .region-card {
-    /* Dimensiones y forma */
-    width: cover;
-    overflow: hidden;
     border-radius: 12px;
-
-    /* Diseño y efectos */
     background-color: var(--beige);
-    border: 3px solid var(--naranja-mexicano); 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+    border: 3px solid var(--naranja-mexicano);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .region-card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
-    border-color: var(--rosa-mexicano); /* Borde Rosa en hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border-color: var(--rosa-mexicano);
 }
 
-/* --- Estilos de Imagen dentro de la Tarjeta --- */
 .region-card img {
     width: 100%;
-    height: 70%; /* La imagen ocupa 70% del espacio en la card */
+    height: 70%;
     object-fit: cover;
 }
 
-/* --- Estilos del Cuerpo/Título de la Tarjeta --- */
 .region-card .card-body {
     background-color: var(--beige);
-    height: 30%; /* El cuerpo ocupa el 30% restante */
+    height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .region-card .card-title {
-    color: var(--naranja-mexicano); 
+    color: var(--naranja-mexicano);
     font-weight: 700;
-    margin: 0; /* Elimina márgenes extra de Bootstrap */
+    margin: 0;
 }
 
 .card-link {
-    text-decoration: none; 
+    text-decoration: none;
 }
-
 
 /* ===============================================
 7. Estilos de Modales (CSS Puros)
 =============================================== */
-
-/* --- Overlay y estado por defecto (Oculto) --- */
 .css-modal {
-    visibility: hidden; 
+    visibility: hidden;
     opacity: 0;
-    position: fixed; 
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8); 
+    background: rgba(0,0,0,0.8);
     transition: opacity 0.4s ease-in-out;
-    z-index: 1050; 
-    overflow-y: auto; 
+    z-index: 1050;
+    overflow-y: auto;
 }
 
-/* Estado Activo: Se hace visible */
 .css-modal:target {
     visibility: visible;
     opacity: 1;
 }
 
-/* --- Contenido del Modal --- */
 .css-modal-content {
     background: var(--beige);
     border-radius: 10px;
     position: relative;
-    margin: 5% auto; 
-    max-width: 900px; 
+    margin: 5% auto;
+    max-width: 900px;
     padding: 20px;
     transform: translateY(-50px);
     transition: transform 0.4s ease-in-out;
     border: 5px solid var(--naranja-mexicano);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-/* Animación de entrada al activarse */
 .css-modal:target .css-modal-content {
     transform: translateY(0);
 }
 
-/* Botón de cierre (X) */
 .css-modal-close {
     position: absolute;
     top: 15px;
@@ -298,92 +257,61 @@ body {
     z-index: 1051;
 }
 
-/* --- Estilos dentro del Modal --- */
-
-/* Título (ya tiene 2.5rem) */
 .css-modal .modal-title {
-    color: var(--naranja-mexicano); 
-    font-size: 2.5rem; 
+    color: var(--naranja-mexicano);
+    font-size: 2.5rem;
     margin-bottom: 0.75rem;
 }
 
 .css-modal .modal-body p {
-    color: var(--negro-suave); 
+    color: var(--negro-suave);
     line-height: 1.6;
-    font-size: 2rem; 
+    font-size: 2rem;
 }
 
-/* Texto fuerte dentro del cuerpo del modal */
 .modal-body strong {
-    color: var(--naranja-mexicano); 
-    font-size: inherit; /* Asegura que las negritas sigan el tamaño del párrafo */
-}
-
-/* Botón "Cerrar" del footer */
-.modal-footer .btn-secondary {
-    background-color: var(--rosa-mexicano); 
-    border-color: var(--rosa-mexicano);
-    transition: all 0.3s;
-}
-
-.modal-footer .btn-secondary:hover {
-    background-color: #c40062; /* Tono más oscuro al pasar el mouse */
-    border-color: #c40062;
+    color: var(--naranja-mexicano);
 }
 
 /* ===============================================
-7. Sección Horarios
+8. Sección Horarios
 =============================================== */
-
-#programa{
-    
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), 
+#programa {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
         url('../images/background/fondo2.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    min-height: 250px; 
+    min-height: 250px;
 }
 
-
-/* Título de la sección */
 .section-title-horarios {
-    color: var(--beige); 
+    color: var(--beige);
     text-shadow: 5px 5px 0 var(--rosa-mexicano);
-    letter-spacing: 0.5px;
 }
 
-/* Tarjeta general */
 .custom-schedule-card {
     border-radius: 14px;
     overflow: hidden;
     border: 2px solid var(--azul-maya);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Sutil animación al pasar */
 .custom-schedule-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 22px rgba(0,0,0,0.15);
 }
 
-/* Encabezado superior de cada tarjeta */
 .custom-card-header {
-    background: linear-gradient(
-        135deg,
-        var(--rosa-mexicano) 0%,
-        var(--naranja-mexicano) 100%
-    ) !important;
-    color: white !important;
+    background: linear-gradient(135deg, var(--rosa-mexicano), var(--naranja-mexicano));
+    color: white;
     padding: 1.2rem 1.5rem;
     border-bottom: 4px double var(--beige);
 }
 
-/* Encabezado de tabla */
 .table-header-guelaguetza {
-    background-color: var(--azul-maya) !important;
+    background-color: var(--azul-maya);
     color: white;
     border-bottom: 3px solid var(--rosa-mexicano);
     font-size: 1.05rem;
@@ -391,122 +319,77 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Tabla: celdas */
 .custom-table th,
 .custom-table td {
-    padding: 1rem !important;
+    padding: 1rem;
     vertical-align: middle;
     font-size: 0.95rem;
     background-color: var(--beige);
 }
 
-/* Hover de filas */
 .table-hover > tbody > tr:hover > * {
-    background-color: var(--rosa-mexicano) !important; /* Ahora es rosa mexicano */
-    color: white !important; /* Texto blanco para que resalte */
+    background-color: var(--rosa-mexicano);
+    color: white;
     transition: background-color 0.25s ease, color 0.25s ease;
 }
-/* Bordes suaves entre filas */
+
 .custom-table tbody tr {
     border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-/* Última fila sin borde */
 .custom-table tbody tr:last-child {
     border-bottom: none;
 }
 
 /* ===============================================
-8. Sección Registro (Nueva Sección)
+9. Sección Registro
 =============================================== */
-
 #registro {
-    /* 1. Definimos las capas de fondo (gradiente + imagen) */
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), /* Degradado oscuro para contraste */
-        url('../images/background/textura1.jpg'); /* ¡AQUÍ VA TU IMAGEN! */
-    
-    /* 2. Propiedades de la imagen */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
+        url('../images/background/textura1.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed; /* Opcional: para un efecto parallax al hacer scroll */
-    
-    /* 3. Propiedades para cubrir el área */
+    background-attachment: fixed;
     background-size: cover;
-    
-    /* 4. Espaciado interno (mantener) */
-    padding: 60px 0; 
+    padding: 60px 0;
 }
 
-/* Estilo para el título de la sección (Ajustado para que resalte sobre el fondo oscuro) */
 #registro h2 {
     color: var(--beige);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Estilo para la descripción principal */
 #registro .lead {
-    color: white; /* Texto blanco para que sea legible sobre el fondo oscuro */
+    color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
-/* Tarjeta contenedora del formulario */
 .custom-form-card {
     background: var(--beige);
     border: 3px solid var(--rosa-mexicano);
     border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Estilo para las etiquetas (labels) */
 .form-label {
     font-weight: 600;
     color: var(--negro-suave);
 }
 
-/* Estilo para destacar palabras entre parentesis dentro del contenido del formulario */
 .resaltado {
     color: var(--azul-maya);
     font-weight: bold;
 }
 
-/* Estilo de los campos de input y select de Bootstrap (control) */
-.form-control:focus, .form-select:focus { 
-    border-color: var(--naranja-mexicano); 
-    box-shadow: 0 0 0 0.25rem rgba(247, 127, 0, 0.25); 
+.form-control:focus, .form-select:focus {
+    border-color: var(--naranja-mexicano);
+    box-shadow: 0 0 0 0.25rem rgba(247,127,0,0.25);
 }
 
-/* Estilo para destacar palabras clave dentro del contenido del formulario */
-.destacado-evento {
-    font-weight: 700;
-    color: var(--naranja-mexicano); 
-}
-
-/*Estilos de Alerta de Precios*/
-
-/* Fondo Azul Maya Suave */
-.alert-precios-guelaguetza {
-    border: 1px solid var(--rosa-mexicano); /* Borde de color Azul Maya */
-    color: var(--negro-suave); /* Texto base oscuro */
-}
-
-/* Color del Título */
-.alert-precios-guelaguetza .text-heading {   
-    color: var(--rosa-mexicano) !important; 
-    font-weight: bold;
-}
-
-/* Color de los valores de los precios */
-.alert-precios-guelaguetza .text-precio-valor {
-    color: var(--naranja-mexicano) !important; 
-    font-weight: 700;
-}
-
-/* Botón de Envío */
 .custom-btn-registro {
-    background-color: var(--rosa-mexicano) !important;
-    border-color: var(--rosa-mexicano) !important;
-    color: white !important;
+    background-color: var(--rosa-mexicano);
+    border-color: var(--rosa-mexicano);
+    color: white;
     font-weight: bold;
     padding: 12px 20px;
     border-radius: 8px;
@@ -514,11 +397,10 @@ body {
 }
 
 .custom-btn-registro:hover {
-    background-color: var(--azul-maya) !important; 
-    border-color: var(--azul-maya) !important;
+    background-color: var(--azul-maya);
+    border-color: var(--azul-maya);
 }
 
-/* Estilo para los enlaces dentro del formulario */
 .link-azul {
     color: var(--azul-maya);
     text-decoration: none;
@@ -529,16 +411,13 @@ body {
 }
 
 /* ===============================================
-9. Footer y Contacto
+10. Footer y Contacto
 =============================================== */
-
 #contacto {
-    /* Fondo negro suave */
     background-color: var(--negro-suave);
-    color: white; 
+    color: white;
 }
 
-/* Encabezados de las secciones del footer */
 .footer-heading {
     color: var(--naranja-mexicano);
     font-size: 1.15rem;
@@ -547,118 +426,70 @@ body {
     display: inline-block;
 }
 
-/* Estilo para el Logo en el Footer (¡TAMAÑO REDUCIDO!) */
 .footer-logo {
-    height: 30px; 
-    width: auto; 
-    vertical-align: middle; 
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
 }
 
-/* Título principal del festival (Aseguramos el color del texto) */
-.footer-title-guelaguetza .logo-text {
-    color: var(--rosa-mexicano);
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-/* Título principal del festival */
 .footer-title-guelaguetza {
     color: var(--rosa-mexicano);
     font-size: 1.5rem;
     letter-spacing: 1px;
 }
 
-/* 🔄 CAMBIO CLAVE: Texto secundario y descripciones */
-#contacto .text-muted, 
-#contacto .small,
-#contacto .text-muted.small {
-    color: var(--beige) !important; 
-    /* ¡Usamos !important para asegurar que sobrescriba el estilo de Bootstrap! */
-}
-
-/* Enlaces (Inicio, Regiones, etc.) */
 .footer-link {
-    color: var(--beige) !important; /* CAMBIO: Color base de los enlaces ahora es beige */
+    color: var(--beige);
     text-decoration: none;
     line-height: 2.2;
     transition: color 0.2s ease;
 }
 
 .footer-link:hover {
-    color: var(--azul-maya) !important; /* Mantenemos el azul maya al pasar el mouse */
+    color: var(--azul-maya);
 }
 
-/* Íconos de Contacto (Mapa, Email, Teléfono) */
-.footer-icon {
-    color: var(--naranja-mexicano);
-    font-size: 1.1rem;
-}
-
-/* Enlaces de Redes Sociales */
 .footer-social-icon {
-    color: var(--beige) !important; /* Mantenemos los iconos en beige */
+    color: var(--beige);
     font-size: 1.4rem;
     transition: color 0.2s ease;
 }
 
 .footer-social-icon:hover {
-    color: var(--rosa-mexicano) !important;
+    color: var(--rosa-mexicano);
 }
 
-/* Línea divisoria */
 .footer-divider {
-    border-top: 1px solid rgba(255, 255, 255, 0.35); /* La hago un poco más visible */
+    border-top: 1px solid rgba(255,255,255,0.35);
 }
 
-/* Texto de Copyright y Políticas */
-.footer-copyright {
-    color: var(--beige) !important; /* CAMBIO: Texto pequeño de copyright en beige */
-    padding-bottom: 10px;
-}
-
+.footer-copyright,
 .footer-policy-link {
-    color: var(--beige) !important; /* CAMBIO: Enlaces de política en beige */
-    text-decoration: none;
+    color: var(--beige);
     transition: color 0.2s ease;
 }
 
 .footer-policy-link:hover {
-    color: var(--naranja-mexicano) !important; /* Naranja mexicano al pasar el mouse */
+    color: var(--naranja-mexicano);
     text-decoration: underline;
 }
 
-/* ===============================================
-9. MODAL FAQ
-=============================================== */
-
-/* Estilo hover para los enlaces del footer (incluido el botón FAQ) */
-
- /* Cambia el color a Naranja Mexicano y subraya al pasar el ratón */
-.footer-link:hover, .text-muted.footer-link:hover {
-    color: var(--naranja-mexicano) !important;
-    text-decoration: underline; 
-}
-
-/* Estilo para cada elemento de la FAQ dentro del modal */
+/* FAQ */
 .custom-faq-item {
-    /* Fondo del item ligeramente más oscuro que el fondo de la tarjeta si es necesario, pero aquí usamos el color base */
-    background-color: var(--beige) !important; 
-    /* Separador con el color Azul Maya */
-    border-color: rgba(var(--azul-maya-rgb), 0.3) !important;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    background-color: var(--beige);
+    border-color: rgba(0,119,192,0.3);
+    padding: 1rem 0;
 }
 
 .custom-faq-item:first-child {
-    border-top: none; /* Quitamos el borde superior del primer elemento */
+    border-top: none;
 }
 
-/* Color de la pregunta */
 .custom-faq-item strong {
     color: var(--azul-maya);
 }
 
-.resp{
+.resp {
     font-weight: 500;
     color: black;
 }
