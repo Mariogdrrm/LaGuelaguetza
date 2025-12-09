@@ -222,7 +222,7 @@ body {
 /* --- Estilos de Imagen dentro de la Tarjeta --- */
 .region-card img {
     width: 100%;
-    height: auto; /* La imagen ocupa 70% del espacio en la card */
+    height: 70%; /* La imagen ocupa 70% del espacio en la card */
     object-fit: cover;
 }
 
@@ -239,7 +239,7 @@ body {
     color: var(--naranja-mexicano);
     font-weight: 700;
     margin: 0;
-    font-size: 2vw; /* predeterminado */
+    font-size: 1vw; /* predeterminado */
 }
 
 .card-link {
@@ -662,6 +662,7 @@ body {
     font-weight: 500;
     color: black;
 }
+
 
 
 
