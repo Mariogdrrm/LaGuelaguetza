@@ -236,10 +236,9 @@ body {
 }
 
 .region-card .card-title {
-    color: var(--naranja-mexicano);
+    color: var(--naranja-mexicano); 
     font-weight: 700;
-    margin: 0;
-    font-size: 20px; /* predeterminado */
+    margin: 0; /* Elimina márgenes extra de Bootstrap */
 }
 
 .card-link {
@@ -662,6 +661,7 @@ body {
     font-weight: 500;
     color: black;
 }
+
 
 
 
