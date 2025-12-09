@@ -245,26 +245,26 @@ body {
     text-decoration: none; 
 }
 
-/* Título de la card escalable automáticamente */
+/* --- Estilos del Cuerpo/Título de la Tarjeta --- */
+.region-card .card-body {
+    background-color: var(--beige);
+    height: 30%; /* Mantienes la proporción para el espacio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Agrega un padding para que el texto no toque los bordes */
+}
+
 .region-card .card-title {
-    color: var(--naranja-mexicano);
+    color: var(--naranja-mexicano); 
     font-weight: 700;
-    margin: 0;
-    padding: 0 0.5rem;
-    text-align: center;
-    /* clamp(min, preferred, max) para escalar según ancho de pantalla */
-    font-size: clamp(1rem, 2.5vw, 2rem);
-    line-height: 1.2;
+    margin: 0; /* Elimina márgenes extra de Bootstrap */
+    /* 🔑 CAMBIO CLAVE: Usa vmin para que el tamaño de la fuente se ajuste
+       basado en el ancho de la ventana gráfica (viewport) */
+    font-size: 4vmin; 
+    /* Opcional: Para evitar que el texto sea diminuto en pantallas muy pequeñas */
+    min-font-size: 16px; 
 }
-
-/* Texto dentro del cuerpo de la card escalable automáticamente */
-.region-card .card-body p {
-    margin: 0.2rem 0;
-    text-align: center;
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-}
-
-
 
 /* ===============================================
 7. Estilos de Modales (CSS Puros)
@@ -682,4 +682,5 @@ body {
     font-weight: 500;
     color: black;
 }
+
 
