@@ -216,7 +216,7 @@ body {
 .region-card:hover {
     transform: translateY(-5px); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
-    border-color: var(--rosa-mexicano); /* Borde Rosa en hover */
+    border-color: var(--azul-maya); /* Borde Rosa en hover */
 }
 
 /* --- Estilos de Imagen dentro de la Tarjeta --- */
@@ -661,6 +661,7 @@ body {
     font-weight: 500;
     color: black;
 }
+
 
 
 
